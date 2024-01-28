@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>com.mobiera.libs</groupId>
    <artifactId>aircast-api-jakarta</artifactId>
-   <version>1.1</version>
+   <version>1.2</version>
    <name>Aircast API Jakarta</name>
    <description>Client Library for Mobiera Aircast Containers (Jakarta dependencies)</description>
    <url>https://github.com/mobiera/aircast-api-jakarta</url>
@@ -61,7 +61,7 @@
       <dependency>
          <groupId>com.mobiera.libs</groupId>
          <artifactId>aircast-api</artifactId>
-         <version>2.5</version>
+         <version>2.6</version>
       </dependency>
    </dependencies>
    <build>
