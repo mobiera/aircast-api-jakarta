@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>com.mobiera.libs</groupId>
    <artifactId>aircast-api-jakarta</artifactId>
-   <version>1.4</version>
+   <version>1.5</version>
    <name>Aircast API Jakarta</name>
    <description>Client Library for Mobiera Aircast Containers (Jakarta dependencies)</description>
    <url>https://github.com/mobiera/aircast-api-jakarta</url>
@@ -46,31 +46,43 @@
       
    
 
+    <!--
+        Quarkus REST/REST-client extensions are kept as <optional>true</optional> so that this
+        API library does not impose a specific REST stack on its consumers. Consumers (typically
+        Quarkus apps) explicitly add their own REST client/server extension (classic
+        quarkus-resteasy* or reactive quarkus-rest*); having both pulled in transitively from this
+        lib would conflict at deployment time.
+    -->
     <dependency>
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-rest</artifactId>
      <version>3.22.1</version>
+     <optional>true</optional>
 </dependency>
 <dependency>
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-rest-client-jackson</artifactId>
      <version>3.22.1</version>
+     <optional>true</optional>
 </dependency>
 <dependency>
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-rest-jackson</artifactId>
      <version>3.22.1</version>
+     <optional>true</optional>
 </dependency>
     
       <dependency>
          <groupId>io.quarkiverse.artemis</groupId>
          <artifactId>quarkus-artemis-core</artifactId>
          <version>3.8.0</version>
+         <optional>true</optional>
       </dependency>
       <dependency>
          <groupId>io.quarkiverse.artemis</groupId>
          <artifactId>quarkus-artemis-jms</artifactId>
          <version>3.8.0</version>
+         <optional>true</optional>
       </dependency>
       <dependency>
          <groupId>com.mobiera.libs</groupId>
