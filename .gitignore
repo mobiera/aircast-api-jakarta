@@ -1,7 +1,4 @@
-/target/
-bin/
-
-#Maven
+# Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -9,25 +6,29 @@ pom.xml.versionsBackup
 release.properties
 .flattened-pom.xml
 
+# Compiled output / vendored jars
+bin/
+lib/
+*.class
+
 # Eclipse
 .project
 .classpath
 .settings/
-/bin/
-/lib/
+.factorypath
+.apt_generated/
 
-# IntelliJ
-.idea
-*.ipr
+# IntelliJ IDEA
+.idea/
 *.iml
+*.ipr
 *.iws
 
 # NetBeans
 nb-configuration.xml
 
-# Visual Studio Code
-.vscode
-.factorypath
+# VS Code
+.vscode/
 
 # OSX
 .DS_Store
@@ -36,10 +37,6 @@ nb-configuration.xml
 *.swp
 *.swo
 
-# patch
+# Patch / merge leftovers
 *.orig
 *.rej
-
-# Local environment
-.env
-/test
