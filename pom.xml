@@ -151,11 +151,16 @@
          <plugin>
             <groupId>org.sonatype.central</groupId>
             <artifactId>central-publishing-maven-plugin</artifactId>
-            <version>0.1.2</version>
+            <!--
+               0.1.2 staged through maven-deploy-plugin; on Maven 3.10 that leaves
+               maven-metadata-local.xml and _remote.repositories in the bundle and Central
+               rejects it ("content that does NOT have a .pom file"). 0.12.0 stages the
+               artifacts itself and only needs the server id (token user/password).
+            -->
+            <version>0.12.0</version>
             <extensions>true</extensions>
             <configuration>
                <publishingServerId>central</publishingServerId>
-               <tokenEnabled>true</tokenEnabled>
             </configuration>
          </plugin>
          <plugin>
